@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy to Minikube') {
             steps {
-                sh "pwd"
+                sh "kubectl get pods"
                 sh "kubectl apply -f kubernetes/tp-jenkins.yaml"
             }
 
