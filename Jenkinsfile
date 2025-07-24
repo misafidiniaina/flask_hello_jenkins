@@ -19,8 +19,8 @@ pipeline {
         }
         stage('Deploy to Minikube') {
             steps {
-                sh "kubectl --context=minikube get pods"
-                sh "kubectl --context=minikube apply -f kubernetes/tp-jenkins.yaml"
+                sh "kubectl get pods"
+                sh "kubectl apply -f kubernetes/tp-jenkins.yaml"
             }
 
         }
