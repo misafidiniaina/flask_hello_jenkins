@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy to Minikube') {
             steps {
-                sh "kubectl apply -f /home/misafidiniaina/tp-jenkins/kubernetes/tp-jenkins.yaml"
+                sh "kubectl apply -f ./kubernetes/tp-jenkins.yaml"
             }
 
         }
