@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Test python') {
             steps {
-                sh "pip3 install -r requirements.txt"
+                sh "pip install --break-system-packages -r requirements.txt"
                 sh "python3 test.py"
             }
         }
