@@ -1,6 +1,8 @@
 pipeline {
-    agent { label 'local' }
-
+    agent any
+    triggers {
+        pollSCM('* * * * *')
+    }
     stages {
         stage('Test python') {
             steps {
