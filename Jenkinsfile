@@ -7,13 +7,6 @@ pipeline {
         pollSCM('* * * * *')
     }
     stages {
-        //stage('Test python') {
-        //    steps {
-        //        sh "pip install --break-system-packages -r requirements.txt"
-         //       sh "python3 test.py"
-
-          //  }
-       // }
         stage('Build'){
             steps{
                     sh "docker build -t localhost:4000/pythontest:latest ."
